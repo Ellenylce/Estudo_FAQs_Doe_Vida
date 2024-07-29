@@ -133,75 +133,86 @@ body {
 }
 
 /*--------- PERGUNTAS FREQUENTES ---------*/
+
+/* Estilo para o título da seção de FAQs */
 #titulo-faqs{
   color: var(--cor-vermelha);
-  width: 100%;
+  width: 100%; //* O título ocupa a largura total do contêiner pai */
   text-align: center;
 }
 
+/* Estilo para o contêiner principal dos FAQs */
 #conteudo-faqs{
-  min-height: 100vh;
+  min-height: 100vh; /* Garante que o contêiner tenha pelo menos a altura total da janela de visualização */
   display:flex;
   align-items: center;
   justify-content: center;
 }
+
+/* Estilo para o contêiner interno dos FAQs */
 #container{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:8px; /* Define o espaçamento entre os itens*/
   width: 700px;
 }
 
+/* Estilo para cada item de acordeão */
 .accordion{
-  border-bottom: 2px solid var(--cor-vermelha);
-  background-color: #fff;
+  border-bottom: 2px solid var(--cor-vermelha); /* Adiciona uma borda inferior vermelha de 2 pixels */
+  background-color: #fff; /* Define a cor de fundo como branca */
   border-radius:8px;
   padding:12px;
   cursor: pointer;
-  box-shadow:5px 5px 5px rgba(0,0,0,0.1);
+  box-shadow:5px 5px 5px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil ao redor do acordeão */
 }
 
+/* Estilo para o cabeçalho do acordeão */
 .accordion-header{
-  font-weight: bold;
+  font-weight: bold; /*Negrito*/
   color:var(--cor-vermelha);
-  width: 100%;
-  border:none; 
-  background-color:transparent;
+  width: 100%; /* O cabeçalho ocupa a largura total do contêiner do acordeão */
+  border:none; /* Remove qualquer borda */
+  background-color:transparent; /* Define o fundo como transparente */
   display:flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribui o espaço entre os itens(Fica com um espaço entre a pergunta e o icone*/
   cursor:pointer;
   font-size:18px;
 }
 
+/* Estilo para o texto no cabeçalho do acordeão */
 .accordion-header span{
-max-width: 100%;
-white-space: nowrap;
-overflow:hidden;
-text-overflow: ellipsis;
+max-width: 100%; /* Garante que o texto não exceda a largura do cabeçalho */
+white-space: nowrap; /* Impede a quebra de linha no texto */
+overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*/
+text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado */
 }
 
+/* Estilo para o corpo do acordeão */
 .accordion-body{
   color:#444;
-  opacity:0;
+  opacity:0; /* Define a opacidade como 0 (oculto) por padrão (O texto desaparece)*/
   font-size:16px;
-  height: 0;
-  overflow:hidden;
-  transition: opacity .3s;
+  height: 0; /* Define a altura como 0 (oculto) por padrão (body fica sem altura*/
+  overflow:hidden;  /* Oculta o conteúdo que excede a altura do corpo */
+  transition: opacity .3s; /* Adiciona uma transição suave para a opacidade */
 }
 
+/* Estilo para o corpo do acordeão quando está ativo */
 .accordion-body.active{
-  height: 100%;
-  opacity:1;
+  height: 100%; /* Define a altura como 100% para mostrar o conteúdo - o conteudo aparece*/
+  opacity:1; /* Define a opacidade como 1 (visível) - o texto fica visivel*/
   padding: 5px 0px;
 }
 
+/* Estilo para a seta do acordeão */
 .arrow{
-  transition: transform .2s linear;
+  transition: transform .2s linear; /* Adiciona uma transição suave para a transformação */
 }
 
-/* Se a class "according tiver(has) a class "active" então a .arrow vai ter uma animação de  girar 180deg*/
+/* Se o acordeão tiver a classe "active", a seta será girada 180 graus */
 .accordion:has(.active) .arrow{
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Gira a seta em 180 graus */
 }
 /* FIM DE CODIGO: PERGUNTAS FREQUENTES */

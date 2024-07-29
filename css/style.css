@@ -133,6 +133,12 @@ body {
 }
 
 /*--------- PERGUNTAS FREQUENTES ---------*/
+#titulo-faqs{
+  color: var(--cor-vermelha);
+  width: 100%;
+  text-align: center;
+}
+
 #conteudo-faqs{
   min-height: 100vh;
   display:flex;
@@ -147,6 +153,7 @@ body {
 }
 
 .accordion{
+  border-bottom: 2px solid var(--cor-vermelha);
   background-color: #fff;
   border-radius:8px;
   padding:12px;
@@ -155,6 +162,8 @@ body {
 }
 
 .accordion-header{
+  font-weight: bold;
+  color:var(--cor-vermelha);
   width: 100%;
   border:none; 
   background-color:transparent;
@@ -162,7 +171,7 @@ body {
   align-items: center;
   justify-content: space-between;
   cursor:pointer;
-  font-size:16px;
+  font-size:18px;
 }
 
 .accordion-header span{
@@ -175,7 +184,7 @@ text-overflow: ellipsis;
 .accordion-body{
   color:#444;
   opacity:0;
-  font-size:14px;
+  font-size:16px;
   height: 0;
   overflow:hidden;
   transition: opacity .3s;

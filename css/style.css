@@ -137,8 +137,8 @@ body {
 /* Estilo para o título da seção de FAQs */
 #titulo-faqs{
   color: var(--cor-vermelha);
-  width: 100%; //* O título ocupa a largura total do contêiner pai */
-  text-align: center;
+  width: 100%; /* O título ocupa a largura total do contêiner pai */
+  text-align:center;
 }
 
 /* Estilo para o contêiner principal dos FAQs */
@@ -204,6 +204,7 @@ text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto corta
   height: 100%; /* Define a altura como 100% para mostrar o conteúdo - o conteudo aparece*/
   opacity:1; /* Define a opacidade como 1 (visível) - o texto fica visivel*/
   padding: 5px 0px;
+  text-align: justify;
 }
 
 /* Estilo para a seta do acordeão */
@@ -215,4 +216,28 @@ text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto corta
 .accordion:has(.active) .arrow{
   transform: rotate(180deg); /* Gira a seta em 180 graus */
 }
+
+
+/*Responsividade*/
+
+@media (max-width: 990px) {
+  #container {
+    width: 95%;
+    gap: 4px;
+  }
+
+  #titulo-faqs{
+    font-size: 25px;
+  }
+
+  .accordion-header span {
+    font-size: 18px;
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    padding: 10px 5px;
+  }
+}
+
 /* FIM DE CODIGO: PERGUNTAS FREQUENTES */
